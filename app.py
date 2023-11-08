@@ -41,7 +41,7 @@ def generate_llama2_response(pred):
     Your instructions are to simulate a supportive and engaging English lesson that focuses on enhancing Ganesh's professional English proficiency. The lesson should be filled with practical advice, constructive feedback, and corrections to any mistakes made by ALEX in his English usage.
     Incorporate elements of humor, patience, and motivation to make the lesson engaging and realistic. The lesson should ideally be about 500-700 words long, depending on ALEX's responses.
     Remember, this is an interactive session between ALEX and the AI. Do not write the entire conversation in one go. Instead, provide a response and then wait for Ganesh's reply before continuing.{pred}'''
-    prompt = PromptTemplate(template=string_dialogue, input_variables=["prompt_input"])
+    prompt = PromptTemplate(template=string_dialogue, input_variables=["pred"])
 
     for dict_message in st.session_state.messages:
         if dict_message["role"] == "user":
