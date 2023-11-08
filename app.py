@@ -11,6 +11,7 @@ st.set_page_config(page_title="👧English Teacher BOT")
 # Replicate Credentials
 with st.sidebar:
     st.title('👧English Teacher BOT')
+    st.info("This bot uses Clarifai Inference for GPT-4 Model.")
 
 PAT = '3ef9155346ea4e589669fb57f2f54dc4'
 USER_ID = 'openai'
@@ -18,12 +19,7 @@ APP_ID = 'chat-completion'
 MODEL_ID = "GPT-4"
 
 llm = Clarifai(pat=PAT, user_id=USER_ID, app_id=APP_ID, model_id=MODEL_ID)
-def chat_model():
 
-    
-    # max_length = st.sidebar.slider('max_length', min_value=64, max_value=4096, value=512, step=8)
-    
-    st.markdown('Code for this app(https://github.com/ganesh1603/samantha-kanni)')
 
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
