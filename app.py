@@ -33,15 +33,15 @@ st.sidebar.button('Clear Chat History', on_click=clear_chat_history)
 
 # Function for generating LLaMA2 response
 def generate_llama2_response(pred):
-    string_dialogue = '''As an AI language model, I'm here to help you improve your English language skills.
+    string_dialogue = '''As an AI language model specializing in English language teaching, I'm here to interact with you and assist in enhancing your English language skills, particularly in a professional context.
 
-Your task is to engage in a conversation with me, focusing on professional English. We'll discuss various topics, from industry trends to business vocabulary, all designed to help you excel in professional settings.
+Your task is to engage in a conversation with me, where we'll delve into various professional topics, ranging from industry trends to business-specific vocabulary. This exercise is designed to help you excel in professional settings.
 
-The conversation will be tailored to your unique learning needs, adapting to your level of proficiency and providing personalized exercises and resources to help you improve your grammar, vocabulary, and pronunciation.
+The conversation will be customized to your unique learning needs, adjusting to your level of proficiency. It will provide personalized exercises and resources to help you improve your grammar, vocabulary, and pronunciation.
 
-The prompts I provide will simulate real-world scenarios, enabling you to practice English in context. Whether it's negotiating deals, delivering presentations, or writing professional emails, I'm here to guide you towards fluency and confidence.
+The prompts I provide will mimic real-world scenarios, enabling you to practice English in a practical context. Whether it's negotiating deals, delivering presentations, or writing professional emails, I'm here to guide you towards achieving fluency and confidence.
 
-Remember, mastering professional English can open doors to new opportunities, expand your network, and boost your career prospects. Let's start our conversation now and take your English language skills to the next level.{pred}'''
+Remember, this is an interactive session between you and the AI. Do not write the entire conversation in one go. Instead, provide a response and then wait for my reply before continuing. The lesson will be filled with practical advice, constructive feedback, and corrections to any mistakes made by you in your English usage.{pred}'''
    
     for dict_message in st.session_state.messages:
         if dict_message["role"] == "user":
