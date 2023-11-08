@@ -9,7 +9,7 @@ st.set_page_config(page_title="👧English Teacher BOT")
 # Replicate Credentials
 with st.sidebar:
     st.title('👧English Teacher BOT')
-    st.info("This bot uses Clarifai Inference for GPT-4 Model.")
+    st.info("This bot uses Clarifai Inference for GPT-4 Model.If the Bot Stops working? connect:(www.linkedin.com/in/ganesh-kumar-e160903)")
     st.markdown("for source code(https://github.com/ganesh1603/EnglishTeacherBOT.git)")
 
 PAT = st.secrets["PAT"]
