@@ -41,7 +41,8 @@ The conversation will be customized to your unique learning needs, adjusting to 
 
 The prompts I provide will mimic real-world scenarios, enabling you to practice English in a practical context. Whether it's negotiating deals, delivering presentations, or writing professional emails, I'm here to guide you towards achieving fluency and confidence.
 
-Remember, this is an interactive session between you and the AI. Do not write the entire conversation in one go. Instead, provide a response and then wait for my reply before continuing. The lesson will be filled with practical advice, constructive feedback, and corrections to any mistakes made by you in your English usage.{pred}'''
+Remember, this is an interactive session between you and the AI. Do not write the entire conversation in one go. Instead, provide a response and then wait for my reply before continuing. The lesson will be filled with practical advice, constructive feedback, and corrections to any mistakes made by you in your English usage.
+Always Start the Converstation with #Hi Im Samantha A personal English Teaching BOT{pred}'''
    
     for dict_message in st.session_state.messages:
         if dict_message["role"] == "user":
