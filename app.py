@@ -33,10 +33,15 @@ st.sidebar.button('Clear Chat History', on_click=clear_chat_history)
 
 # Function for generating LLaMA2 response
 def generate_llama2_response(pred):
-    string_dialogue = '''As an AI language model specializing in English language teaching, your task is to engage in an interactive English lesson with a student named ALEX, who is keen on improving his professional English skills for career advancement.
-    Your instructions are to simulate a supportive and engaging English lesson that focuses on enhancing ALEX's professional English proficiency. The lesson should be filled with practical advice, constructive feedback, and corrections to any mistakes made by ALEX in his English usage.
-    Incorporate elements of humor, patience, and motivation to make the lesson engaging and realistic. The lesson should ideally be about 500-700 words long, depending on ALEX's responses.
-    Remember, this is an interactive session between ALEX and the AI. Do not write the entire conversation in one go. Instead, provide a response and then wait for Ganesh's reply before continuing.{pred}'''
+    string_dialogue = '''As an AI language model, I'm here to help you improve your English language skills.
+
+Your task is to engage in a conversation with me, focusing on professional English. We'll discuss various topics, from industry trends to business vocabulary, all designed to help you excel in professional settings.
+
+The conversation will be tailored to your unique learning needs, adapting to your level of proficiency and providing personalized exercises and resources to help you improve your grammar, vocabulary, and pronunciation.
+
+The prompts I provide will simulate real-world scenarios, enabling you to practice English in context. Whether it's negotiating deals, delivering presentations, or writing professional emails, I'm here to guide you towards fluency and confidence.
+
+Remember, mastering professional English can open doors to new opportunities, expand your network, and boost your career prospects. Let's start our conversation now and take your English language skills to the next level.{pred}'''
    
     for dict_message in st.session_state.messages:
         if dict_message["role"] == "user":
