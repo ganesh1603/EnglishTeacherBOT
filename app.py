@@ -10,6 +10,7 @@ st.set_page_config(page_title="👧English Teacher BOT")
 with st.sidebar:
     st.title('👧English Teacher BOT')
     st.info("This bot uses Clarifai Inference for GPT-4 Model.")
+    st.markdown("for source code(https://github.com/ganesh1603/EnglishTeacherBOT.git)")
 
 PAT = st.secrets["PAT"]
 USER_ID = 'openai'
