@@ -11,7 +11,7 @@ with st.sidebar:
     st.title('👧English Teacher BOT')
     st.info("This bot uses Clarifai Inference for GPT-4 Model.")
 
-PAT = '3ef9155346ea4e589669fb57f2f54dc4'
+PAT = st.secrets["PAT"]
 USER_ID = 'openai'
 APP_ID = 'chat-completion'
 MODEL_ID = "GPT-4"
