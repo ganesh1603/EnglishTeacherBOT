@@ -36,7 +36,7 @@ st.sidebar.button('Clear Chat History', on_click=clear_chat_history)
 
 
 # Function for generating LLaMA2 response
-def generate_llama2_response(pred):
+def generate_response(pred):
     string_dialogue = '''As an AI language model specializing in English language teaching, your task is to engage in an interactive English lesson with a student named ALEX, who is keen on improving his professional English skills for career advancement.
     Your instructions are to simulate a supportive and engaging English lesson that focuses on enhancing Ganesh's professional English proficiency. The lesson should be filled with practical advice, constructive feedback, and corrections to any mistakes made by ALEX in his English usage.
     Incorporate elements of humor, patience, and motivation to make the lesson engaging and realistic. The lesson should ideally be about 500-700 words long, depending on ALEX's responses.
@@ -48,9 +48,9 @@ def generate_llama2_response(pred):
         else:
             template += "Assistant: " + dict_message["content"] + "\n\n"
 
-    prompt = PromptTemplate(template=string_dialogue, input_variables=["pred"])
+    prompt_template = PromptTemplate(template=string_dialogue, input_variables=["pred"])
 
-    llm_chain = LLMChain(prompt=prompt, llm=llm)
+    llm_chain = LLMChain(prompt=prompt_template, llm=llm)
 
     output =llm_chain.run(pred)
     
@@ -66,7 +66,7 @@ if prompt := st.chat_input():
 if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
-            response = generate_llama2_response(prompt)
+            response = generate_response(prompt)
             placeholder = st.empty()
             full_response = ''
             for item in response:
